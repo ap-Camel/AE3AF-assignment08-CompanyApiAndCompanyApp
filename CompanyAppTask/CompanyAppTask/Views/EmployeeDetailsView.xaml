@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CompanyAppTask.Views.EmployeeDetailsView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" 
+                   Grid.Row="0"
+                   Grid.ColumnSpan="3"
+                   Text="Employee ID"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Label Grid.Column="0" 
+                   Grid.Row="1"
+                   Grid.ColumnSpan="3"
+                   Text="Employee name"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Label Grid.Column="0" 
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   Text="Employee Salary"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Label Grid.Column="0" 
+                   Grid.Row="3"
+                   Grid.ColumnSpan="3"
+                   Text="Department Id"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Label Grid.Column="3" 
+                   Grid.Row="0"
+                   Grid.ColumnSpan="3"
+                   Text="{Binding SelectedEmployee.EmId}"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Entry Grid.Column="3" 
+                   Grid.Row="1"
+                   Grid.ColumnSpan="3"
+                   Text="{Binding SelectedEmployee.Name}"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Entry Grid.Column="3" 
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   Text="{Binding SelectedEmployee.Salary}"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Entry Grid.Column="3" 
+                   Grid.Row="3"
+                   Grid.ColumnSpan="3"
+                   Text="{Binding SelectedEmployee.DpId}"
+                   FontSize="Large"
+                   TextColor="Blue"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Add"
+                    FontSize="Large"
+                    IsEnabled="True"
+                    Command="{Binding AddCommand}"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Text="Update"
+                    FontSize="Large"
+                    IsEnabled="True"
+                    Command="{Binding UpdateCommand}"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="2"
+                    Text="Delete"
+                    FontSize="Large"
+                    IsEnabled="True"
+                    Command="{Binding DeleteCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

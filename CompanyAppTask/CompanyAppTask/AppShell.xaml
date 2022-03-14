@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="CompanyAppTask.AppShell"
+       xmlns:pages="clr-namespace:CompanyAppTask.Views"
+       >
+    
+    <FlyoutItem Title="Sensors"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Departments">
+            <ShellContent Title="Battery" ContentTemplate="{DataTemplate pages:DepartmentListView}"/>
+        </Tab>
+
+        <Tab Title="Employees">
+            <ShellContent Title="Network" ContentTemplate="{DataTemplate pages:EmployeeListView}"/>
+        </Tab>
+
+        
+
+    </FlyoutItem>
+    
+</Shell>
